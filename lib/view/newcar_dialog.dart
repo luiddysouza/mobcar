@@ -12,7 +12,10 @@ import 'components/custom_textbutton.dart';
 
 class NewCarDialog extends StatefulWidget {
   final Carro carro;
-  const NewCarDialog({Key? key, required this.carro}) : super(key: key);
+  const NewCarDialog({
+    super.key,
+    required this.carro,
+  });
 
   @override
   State<NewCarDialog> createState() => _NewCarDialogState();

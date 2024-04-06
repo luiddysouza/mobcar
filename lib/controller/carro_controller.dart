@@ -16,7 +16,7 @@ class CarroController {
     var client = http.Client();
     try {
       var response = await client.get(
-        Uri.parse('https://parallelum.com.br/fipe/api/v1' + opcao),
+        Uri.parse('https://parallelum.com.br/fipe/api/v1$opcao'),
       );
       var decodedResponse = jsonDecode(response.body);
       //TODO como fazer quanto a ser lista ou não sem gambiarra usando Is List

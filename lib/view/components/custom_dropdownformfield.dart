@@ -1,15 +1,17 @@
 // ignore_for_file: file_names
 
 import 'package:flutter/material.dart';
-import 'package:mobicar/shared/colors.dart';
-import 'package:mobicar/view/components/custom_text.dart';
+import 'package:mobcar/shared/colors.dart';
+import 'package:mobcar/view/components/custom_text.dart';
 
 class CustomDropDownFormField extends StatefulWidget {
   final List<DropdownMenuItem<String>> itens;
   final String title;
-  const CustomDropDownFormField(
-      {Key? key, required this.itens, required this.title})
-      : super(key: key);
+  const CustomDropDownFormField({
+    super.key,
+    required this.itens,
+    required this.title,
+  });
 
   @override
   State<CustomDropDownFormField> createState() =>

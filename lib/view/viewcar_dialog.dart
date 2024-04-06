@@ -10,7 +10,7 @@ import 'components/custom_textbutton.dart';
 
 class ViewCarDialog extends StatefulWidget {
   final Carro carro;
-  const ViewCarDialog({Key? key, required this.carro}) : super(key: key);
+  const ViewCarDialog({super.key, required this.carro});
 
   @override
   State<ViewCarDialog> createState() => _ViewCarDialogState();
@@ -84,11 +84,11 @@ class _ViewCarDialogState extends State<ViewCarDialog> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 15),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     "Marca",
                     style: TextStyle(
@@ -109,11 +109,11 @@ class _ViewCarDialogState extends State<ViewCarDialog> {
                 ],
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.only(bottom: 15),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 15),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: const [
+                children: [
                   Text(
                     "Modelo",
                     style: TextStyle(

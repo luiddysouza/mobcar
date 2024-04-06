@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:mobicar/shared/colors.dart';
-import 'package:mobicar/view/components/custom_textbutton.dart';
+import 'package:mobcar/shared/colors.dart';
+import 'package:mobcar/view/components/custom_textbutton.dart';
 
 import '../model/carro_model.dart';
 import '../shared/icons.dart';
@@ -10,7 +10,9 @@ import 'components/carro_listtile.dart';
 import 'components/custom_drawer.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({Key? key}) : super(key: key);
+  const HomePage({
+    super.key,
+  });
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -89,9 +91,9 @@ class _HomePageState extends State<HomePage> {
             width: MediaQuery.of(context).size.width,
             height: 50,
             color: MobCarColors.primary,
-            child: Row(
+            child: const Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
+              children: [
                 Icon(Icons.copyright, color: MobCarColors.blue6),
                 Text(
                   "2022. All rights reserved to MobCar.",

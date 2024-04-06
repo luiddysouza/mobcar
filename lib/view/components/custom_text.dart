@@ -7,15 +7,14 @@ class CustomText extends StatefulWidget {
   final FontWeight fontWeight;
 
   const CustomText(
-      {Key? key,
+      {super.key,
       required this.title,
       required this.size,
       required this.color,
-      required this.fontWeight})
-      : super(key: key);
+      required this.fontWeight});
 
   @override
-  _CustomTextState createState() => _CustomTextState();
+  State<CustomText> createState() => _CustomTextState();
 }
 
 class _CustomTextState extends State<CustomText> {

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:mobicar/shared/colors.dart';
+import 'package:mobcar/shared/colors.dart';
 
 import 'custom_textbutton.dart';
 
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({Key? key}) : super(key: key);
+  const CustomDrawer({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {

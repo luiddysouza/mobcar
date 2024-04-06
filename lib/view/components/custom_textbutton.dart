@@ -7,30 +7,20 @@ class CustomTextButton extends StatelessWidget {
   final Color corTexto;
   final Color corInterna;
   final double sizeText;
-  const CustomTextButton(
-      {Key? key,
-      required this.onPressed,
-      required this.title,
-      required this.corBorda,
-      required this.corTexto,
-      required this.corInterna,
-      required this.sizeText})
-      : super(key: key);
+  const CustomTextButton({
+    super.key,
+    required this.onPressed,
+    required this.title,
+    required this.corBorda,
+    required this.corTexto,
+    required this.corInterna,
+    required this.sizeText,
+  });
 
   @override
   Widget build(BuildContext context) {
     return TextButton(
       onPressed: onPressed,
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 5),
-        child: Text(
-          title,
-          style: TextStyle(
-            color: corTexto,
-            fontSize: sizeText,
-          ),
-        ),
-      ),
       style: ButtonStyle(
         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
           RoundedRectangleBorder(
@@ -41,6 +31,16 @@ class CustomTextButton extends StatelessWidget {
           ),
         ),
         backgroundColor: MaterialStateProperty.all(corInterna),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 5),
+        child: Text(
+          title,
+          style: TextStyle(
+            color: corTexto,
+            fontSize: sizeText,
+          ),
+        ),
       ),
     );
   }

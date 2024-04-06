@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mobicar/shared/colors.dart';
+import 'package:mobcar/shared/colors.dart';
 
 import '../../model/carro_model.dart';
 import '../newcar_dialog.dart';
@@ -8,7 +8,11 @@ import 'custom_text.dart';
 
 class CarroListTile extends StatelessWidget {
   final Carro carro;
-  const CarroListTile({Key? key, required this.carro}) : super(key: key);
+
+  const CarroListTile({
+    super.key,
+    required this.carro,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -36,10 +40,10 @@ class CarroListTile extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Column(
+                    const Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: const [
+                      children: [
                         CustomText(
                           title: "Modelo",
                           size: 14,
