@@ -2,26 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../model/carro_model.dart';
-import '../shared/colors.dart';
-import '../shared/icons.dart';
-import 'components/custom_dropdownformfield.dart';
-import 'components/custom_text.dart';
-import 'components/custom_textbox.dart';
-import 'components/custom_textbutton.dart';
+import '../../../external/mappers/carro_model.dart';
+import '../../../shared/colors.dart';
+import '../../../shared/icons.dart';
+import '../custom_text.dart';
+import '../custom_text_button_widget.dart';
 
-class NewCarDialog extends StatefulWidget {
+class ViewCarDialog extends StatefulWidget {
   final Carro carro;
-  const NewCarDialog({
-    super.key,
-    required this.carro,
-  });
+  const ViewCarDialog({super.key, required this.carro});
 
   @override
-  State<NewCarDialog> createState() => _NewCarDialogState();
+  State<ViewCarDialog> createState() => _ViewCarDialogState();
 }
 
-class _NewCarDialogState extends State<NewCarDialog> {
+class _ViewCarDialogState extends State<ViewCarDialog> {
   @override
   Widget build(BuildContext context) {
     return Dialog(
@@ -39,7 +34,7 @@ class _NewCarDialogState extends State<NewCarDialog> {
                     SvgPicture.asset(CustomIcons.car),
                     const SizedBox(width: 10),
                     const CustomText(
-                      title: "Adicionar Carro",
+                      title: "Visualizar Carro",
                       size: 14,
                       color: MobCarColors.primary,
                       fontWeight: FontWeight.bold,
@@ -89,57 +84,68 @@ class _NewCarDialogState extends State<NewCarDialog> {
                 ],
               ),
             ),
-            Column(
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Marca",
+                    style: TextStyle(
+                      color: MobCarColors.primary,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Ano",
+                    style: TextStyle(
+                      color: MobCarColors.primary,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.only(bottom: 15),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Modelo",
+                    style: TextStyle(
+                      color: MobCarColors.primary,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    "Valor",
+                    style: TextStyle(
+                      color: MobCarColors.primary,
+                      fontSize: 14,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  SizedBox(),
+                ],
+              ),
+            ),
+            Row(
               children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: CustomDropDownFormField(
-                    itens: [],
-                    title: "Marca",
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 10),
-                  child: CustomDropDownFormField(
-                    itens: [],
-                    title: "Modelo",
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
-                  child: CustomDropDownFormField(
-                    itens: [],
-                    title: "Ano",
-                  ),
-                ),
-                const CustomTextBox(title: "Valor (R\$)"),
-                Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: [
-                      CustomTextButton(
-                        title: "Cancelar",
-                        sizeText: 12,
-                        corBorda: MobCarColors.primary,
-                        corInterna: MobCarColors.background,
-                        corTexto: MobCarColors.primary,
-                        onPressed: () {
-                          Navigator.pop(context);
-                        },
-                      ),
-                      const SizedBox(width: 10),
-                      CustomTextButton(
-                        title: "Salvar",
-                        sizeText: 12,
-                        corBorda: MobCarColors.background,
-                        corInterna: MobCarColors.primary,
-                        corTexto: MobCarColors.background,
-                        onPressed: () {
-                          //TODO salvar carro
-                        },
-                      ),
-                    ],
+                Expanded(
+                  child: CustomTextButton(
+                    onPressed: () {
+                      //TODO salvar como reservado
+                    },
+                    title: "Reservar",
+                    sizeText: 12,
+                    corBorda: MobCarColors.primary,
+                    corTexto: MobCarColors.background,
+                    corInterna: MobCarColors.primary,
                   ),
                 ),
               ],

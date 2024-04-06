@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobcar/shared/colors.dart';
-import 'package:mobcar/view/components/custom_text.dart';
+import 'package:mobcar/presenter/shared/custom_text.dart';
 
 class CustomDropDownFormField extends StatefulWidget {
   final List<DropdownMenuItem<String>> itens;

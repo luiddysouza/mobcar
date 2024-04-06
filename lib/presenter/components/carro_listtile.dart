@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:mobcar/presenter/shared/custom_text.dart';
 import 'package:mobcar/shared/colors.dart';
 
-import '../../model/carro_model.dart';
-import '../newcar_dialog.dart';
-import '../viewcar_dialog.dart';
-import 'custom_text.dart';
+import '../../external/mappers/carro_model.dart';
+import '../shared/dialogs/newcar_dialog.dart';
+import '../shared/dialogs/viewcar_dialog.dart';
 
 class CarroListTile extends StatelessWidget {
   final Carro carro;
@@ -99,7 +99,6 @@ class CarroListTile extends StatelessWidget {
                         );
                         break;
                       case 'delete':
-                        //TODO Deletar carro do BD
                         break;
                       default:
                     }

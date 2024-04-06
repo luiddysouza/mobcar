@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/cupertino.dart';
 
-import '../model/dados_model.dart';
+import '../external/mappers/dados_model.dart';
 
 import 'package:http/http.dart' as http;
 

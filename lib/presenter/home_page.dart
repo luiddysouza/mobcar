@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:mobcar/shared/colors.dart';
-import 'package:mobcar/view/components/custom_textbutton.dart';
+import 'package:mobcar/presenter/shared/custom_text_button_widget.dart';
 
-import '../model/carro_model.dart';
+import '../external/mappers/carro_model.dart';
 import '../shared/icons.dart';
-import 'newcar_dialog.dart';
-import 'components/carro_listtile.dart';
-import 'components/custom_drawer.dart';
+import 'shared/dialogs/newcar_dialog.dart';
+import 'shared/carro_listtile.dart';
+import 'shared/custom_drawer.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({
